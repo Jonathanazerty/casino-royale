@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(161, 228, 228);
+    color: rgb(50, 50, 141);
+    text-align: center;
+    padding: 200px;
+    margin: auto;
+    font-family: 'Rubik', sans-serif;
+}
+
+img {
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px;
+    color: rgb(89, 180, 180);
+  }

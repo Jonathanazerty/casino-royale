@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Guessing game</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Rock Paper Scissors <br/>
+                    🗿📃✂️</h1>
+                <h3>
+                    <strong>I dare you to play rock paper scissors against the computer<br/>
+                        Don't be scared...
+                    </strong>
+                </h3>
+            </header>
+            <div class="selections">
+                        <button class="selection" data-selection="rock" style="font-size:25px"><span>&#9994;&#127998;</span></button>
+                        <button class="selection" data-selection="paper" style="font-size:25px"><span>&#9995;&#127998;</span></button>
+                        <button class="selection" data-selection="scissors" style="font-size:25px"><span>&#9996;&#127998;</span></button>
+            </div>
+            <div class="results">
+                <div>
+                    <b>You</b>
+                    <span class="result-score" data-your-score>0</span>
+                </div>
+                <div data-final-column>
+                    <b>Computer</b>
+                    <span class="result-score" data-your-score>0</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

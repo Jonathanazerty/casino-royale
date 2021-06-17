@@ -69,6 +69,22 @@ function isWinner(selection, opponentSelection){
 
 }
 
+// TODO: win, lose or draw
+function draw(){
+    document.getElementById('draw-message').innerHTML = "it's a draw ! 👔 👯 🤝";
+    drawMessage("draw-message");
+
+}
+
+function win(){
+    document.getElementById('win-message').innerHTML = "You won this time 👏🏾🏆";
+    drawMessage("win-message");
+}
+
+function lose(){
+    document.getElementById('lose-message').innerHTML = "You lose this time 🤦🏾⛔";
+    drawMessage("lose-message");
+}
 
 // TODO: make randow selection for computer
 function randomSelection () {

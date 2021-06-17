@@ -9,6 +9,7 @@ body {
 
 button{
     background-color: white;
+    color: rgb(50, 50, 141);
     height: 50px;
     width: 50px;
     border-radius: 10px;
@@ -25,4 +26,5 @@ button:hover{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 

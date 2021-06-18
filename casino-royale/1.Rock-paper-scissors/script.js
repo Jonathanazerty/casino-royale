@@ -1,3 +1,19 @@
+document.querySelector(".btn-playGame").addEventListener("click", function(){
+
+    let enterScreen = document.querySelector(".playGame");
+
+    enterScreen.style.opacity = "0.9";
+    setTimeout(() =>{ enterScreen.style.opacity = "0.7";}, 200);
+    setTimeout(() =>{ enterScreen.style.opacity = "0.6";}, 300);
+    setTimeout(() =>{ enterScreen.style.opacity = "0.5";}, 400);
+    setTimeout(() =>{ enterScreen.style.opacity = "0.4";}, 500);
+    setTimeout(() =>{ enterScreen.style.opacity = "0.2";}, 600);
+    setTimeout(() =>{ enterScreen.style.opacity = "0.1";}, 700);
+    setTimeout(() =>{ enterScreen.style.opacity = "0";}, 800);
+    setTimeout(() =>{ enterScreen.remove()}, 1000);
+
+});  
+
 // TODO: make selections of buttons
 const selectionButtons = document.querySelectorAll('[data-selection]');
 const finalColumn = document.querySelector('[data-final-column]');

@@ -27,4 +27,6 @@ button:hover{
     grid-template-columns: repeat(2, 1fr);
 }
 
-
+.btn-playGame {
+    background-color: rgb(50, 50, 141);
+}

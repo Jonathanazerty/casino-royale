@@ -1,9 +1,9 @@
 // TODO: make selections of buttons
-const selectionButtons = document.querySelectorAll('[data-selection]')
-const finalColumn = document.querySelector('[data-final-column]')
-const computerScore = document.querySelector('[data-computer-score]')
-const yourScore = document.querySelector('[data-your-score]')
-const playAgain = document.getElementById("reset")
+const selectionButtons = document.querySelectorAll('[data-selection]');
+const finalColumn = document.querySelector('[data-final-column]');
+const computerScore = document.querySelector('[data-computer-score]');
+const yourScore = document.querySelector('[data-your-score]');
+const playAgain = document.getElementById("reset");
 // TODO: make selections of the 3 options 
 const SELECTIONS = [
     {
@@ -21,7 +21,7 @@ const SELECTIONS = [
         emoji:'✌🏾 ',
         beats:'paper'
     }
-]
+];
 // TODO: make selections of buttons
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
@@ -29,8 +29,8 @@ selectionButtons.forEach(selectionButton => {
         const selection = SELECTIONS.find(selection => selection.name === selectionName) // looping through selection and searching for the same name
         makeSelection(selection)
 
-    })
-})
+    });
+});
 
 // TODO restart game
 function restartGame(){
@@ -39,7 +39,7 @@ function restartGame(){
     yourScore.innerHTML = selection;
     computerScore.innerHTML = computerSelection;
 
-}
+};
 
 playAgain.addEventListener('click', restartGame);
 
@@ -48,47 +48,52 @@ playAgain.addEventListener('click', restartGame);
 // TODO: make a selection
 function makeSelection(selection){
     const computerSelection = randomSelection()
-    const yourWinner = isWinner(selection, computerSelection)
-    const computerWinner = isWinner (computerSelection, selection)
+    const yourWinner = isWinner(selection, computerSelection);
+    const computerWinner = isWinner (computerSelection, selection);
 
     // TODO: increment score
-    if (yourWinner) incrementScore(yourScore)
-    if (computerWinner) incrementScore(computerScore)
+    if (yourWinner){
+        incrementScore(yourScore)
+        //TODO: add message
+        document.getElementById("message-win-you").innerHTML = `You won this time 👏🏾🏆`;
+        setTimeout(function() {
+            document.getElementById("message-win-you").style = "display:none";
+            }, 2000);
+    }
+    if (computerWinner){
+        incrementScore(computerScore)
+        //TODO: add message
+        document.getElementById("message-win-computer").innerHTML = `Computer won this time 🤦🏾⛔`;
+        setTimeout(function() {
+            document.getElementById("message-win-computer").style = "display:none";
+            }, 2000);
+    }
+    if (yourWinner == computerWinner){
+        //TODO: add message
+        document.getElementById("message-draw").innerHTML = `it's a draw ! 👔 👯 🤝`;
+        setTimeout(function() {
+            document.getElementById("message-draw").style = "display:none";
+            }, 2000);
+    }
 
-}
-// TODO: increment the score on the page (doesn't work anymore)
+};
+// TODO: increment the score on the page
 function incrementScore(score) {
     score.innerText = parseInt(score.innerText) + 1
 
-}
+};
 
 
 // TODO: who beats who
 function isWinner(selection, opponentSelection){
     return selection.beats === opponentSelection.name
 
-}
+};
 
-// TODO: win, lose or draw
-function draw(){
-    document.getElementById('draw-message').innerHTML = "it's a draw ! 👔 👯 🤝";
-    drawMessage("draw-message");
-
-}
-
-function win(){
-    document.getElementById('win-message').innerHTML = "You won this time 👏🏾🏆";
-    drawMessage("win-message");
-}
-
-function lose(){
-    document.getElementById('lose-message').innerHTML = "You lose this time 🤦🏾⛔";
-    drawMessage("lose-message");
-}
 
 // TODO: make randow selection for computer
 function randomSelection () {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
     return SELECTIONS[randomIndex]
-}
+};
 

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Guessing game</title>
+        <title>Game : Rock Paper Scissors</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <header>
-                <h1>Rock Paper Scissors <br/>
+                                <h1>Rock Paper Scissors <br/>
                     🗿📃✂️</h1>
                 <h3>
                     <strong>I dare you to play rock paper scissors against the computer<br/>
@@ -19,19 +19,24 @@
                 </h3>
             </header>
             <div class="selections">
-                        <button class="selection" data-selection="rock" style="font-size:25px"><span>&#9994;&#127998;</span></button>
-                        <button class="selection" data-selection="paper" style="font-size:25px"><span>&#9995;&#127998;</span></button>
-                        <button class="selection" data-selection="scissors" style="font-size:25px"><span>&#9996;&#127998;</span></button>
+                        <button class="selection" data-selection="rock" style="font-size:25px"><span>✊🏾</span></button>
+                        <button class="selection" data-selection="paper" style="font-size:25px"><span>✋🏾</span></button>
+                        <button class="selection" data-selection="scissors" style="font-size:25px"><span>✌🏾</span></button>
             </div>
             <div class="results">
                 <div>
                     <b>You</b>
                     <span class="result-score" data-your-score>0</span>
+                    <label for="" id="message-win-you" data-your-score></label>
                 </div>
                 <div data-final-column>
                     <b>Computer</b>
                     <span class="result-score" data-computer-score>0</span>
+                    <label for="" id="message-win-computer" data-computer-score></label>
                 </div>
+            </div>
+            <div>
+                <label for="" id="message-draw" data-your-score></label>
             </div>
             <div class="Play again">
                 <button class="btn" id="reset"style="font-size:24px"><b> &#x1F504</b></button>

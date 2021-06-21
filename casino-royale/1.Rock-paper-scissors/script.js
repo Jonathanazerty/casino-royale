@@ -12,7 +12,7 @@ document.querySelector(".btn-playGame").addEventListener("click", function(){
     setTimeout(() =>{ enterScreen.style.opacity = "0";}, 800);
     setTimeout(() =>{ enterScreen.remove()}, 1000);
 
-});  
+
 
 // TODO: make selections of buttons
 const selectionButtons = document.querySelectorAll('[data-selection]');
@@ -115,3 +115,4 @@ function restartGame(){
 
 playAgain.addEventListener('click', restartGame);
 
+});  

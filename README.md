@@ -28,3 +28,5 @@ How it works
     
     May the best one win ! 👏🏾🏆
     
+    Link: https://jonathanazerty.github.io/casino-royale/
+    

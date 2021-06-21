@@ -1,0 +1,33 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(8, 4, 27);
+    color: lightyellow;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button{
+    background-color: white;
+    color: rgb(50, 50, 141);
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgb(105, 103, 221);
+
+}
+
+button:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(161, 228, 228);
+    color: rgb(50, 50, 141);
+    text-align: center;
+    padding: 200px;
+    margin: auto;
+    font-family: 'Rubik', sans-serif;
+}
+
+button{
+    background-color: white;
+    color: rgb(50, 50, 141);
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 4px 4px 4px rgb(104, 168, 168);
+
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.btn-playGame {
+    background-color: rgb(50, 50, 141);
+}
